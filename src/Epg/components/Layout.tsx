@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 // Import types
 import {
@@ -8,16 +8,16 @@ import {
   DateTime,
   Position,
   BaseTimeFormat,
-} from "../helpers/types";
+} from '../helpers/types';
 
 // Import helpers
-import { getProgramOptions, isFutureTime } from "../helpers";
+import { getProgramOptions, isFutureTime } from '../helpers';
 
 // Import styles
-import { EpgStyled } from "../styles";
+import { EpgStyled } from '../styles';
 
 // Import components
-import { Timeline, Channels, Program, Line } from "../components";
+import { Timeline, Channels, Program, Line } from '../components';
 
 interface RenderTimeline {
   isBaseTimeFormat: BaseTimeFormat;
@@ -51,7 +51,7 @@ interface LayoutProps {
   isTimeline?: boolean;
   isLine?: boolean;
   isProgramVisible: (position: Position) => boolean;
-  isChannelVisible: (position: Pick<Position, "top">) => boolean;
+  isChannelVisible: (position: Pick<Position, 'top'>) => boolean;
   renderProgram?: (v: {
     program: ProgramItem;
     isRTL: boolean;
@@ -167,7 +167,7 @@ export const Layout = React.forwardRef<HTMLDivElement, LayoutProps>(
           width={dayWidth}
           height={contentHeight}
         >
-          {programs.map((program) =>
+          {programs.map(program =>
             renderPrograms(program as ProgramWithPosition)
           )}
         </Content>

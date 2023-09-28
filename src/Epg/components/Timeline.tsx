@@ -1,13 +1,13 @@
-import * as React from "react";
+import * as React from 'react';
 
 // Import types
-import { BaseTimeFormat } from "../helpers/types";
+import { BaseTimeFormat } from '../helpers/types';
 
 // Import styles
-import { TimelineStyled } from "../styles";
+import { TimelineStyled } from '../styles';
 
 // Import hooks
-import { useTimeline } from "../hooks";
+import { useTimeline } from '../hooks';
 
 const {
   TimelineWrapper,

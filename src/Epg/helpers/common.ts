@@ -1,6 +1,6 @@
-import { useLayoutEffect, useEffect } from "react";
-import { differenceInHours, startOfDay } from "date-fns";
-import { HOURS_IN_DAY } from "./variables";
+import { useLayoutEffect, useEffect } from 'react';
+import { differenceInHours, startOfDay } from 'date-fns';
+import { HOURS_IN_DAY } from './variables';
 
 type DateTime = string | number | Date;
 
@@ -15,7 +15,7 @@ export const omit = (obj: OmitObjectType, ...props: string[]) => {
   return result;
 };
 
-export const generateArray = (num: number) => new Array(num).fill("");
+export const generateArray = (num: number) => new Array(num).fill('');
 
 type ProgramOptions = {
   position: { width: number; height: number; top: number; left: number };
@@ -29,7 +29,7 @@ export const getProgramOptions = <T extends ProgramOptions>(program: T) => {
 };
 
 export const useIsomorphicLayoutEffect = () =>
-  typeof window !== "undefined" ? useLayoutEffect : useEffect;
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 export const getHourWidth = (dayWidth: number) => dayWidth / HOURS_IN_DAY;
 
@@ -42,7 +42,7 @@ interface DayWidth {
   endDate: DateTime;
 }
 export const getDayWidthResources = ({
-  dayWidth,
+  // dayWidth,
   startDate,
   endDate,
 }: DayWidth) => {
@@ -61,7 +61,7 @@ export const getDayWidthResources = ({
   );
 
   const numberOfHoursInDay = differenceInHours(endDateTime, startDateTime);
-  const hourWidth = Math.floor(dayWidth / numberOfHoursInDay);
+  const hourWidth = 500;
   const newDayWidth = hourWidth * numberOfHoursInDay;
 
   return {
